@@ -1,0 +1,64 @@
+# Default config for sway
+#
+# Copy this to ~/.config/sway/config and edit it to your liking.
+#
+# Read `man 5 sway` for a complete reference.
+
+exec ~/.config/wpg/wp_init.sh
+
+set $user_conf $HOME/.config/sway
+
+set $theme $user_conf/themes/wpgtk
+
+# theme variables
+include $theme/definitions
+
+# variables
+include $user_conf/definitions
+
+# user variables
+include $user_conf/definitions.d/*.conf
+
+include $user_conf/inputs/*
+include $user_conf/outputs/*
+
+# enable modes
+include /etc/sway/modes/*
+
+# output * bg /home/felix/Pictures/abstract.png fill
+
+bindsym $mod+m exec $TERMINAL_COMMAND ranger
+bindsym $mod+o exec brave
+
+# only enable this if every app you use is compatible with wayland
+# xwayland disable
+
+# include additional configs e.g. to autostart applications
+include $user_conf/config.d/*.conf
+
+layer_effects "waybar" "blur enable; corner_radius 6; shadows disable"
+#layer_effects "notifications" "blur enable"
+layer_effects "rofi" "blur enable; corner_radius 6; shadows enable"
+blur enable
+corner_radius 6
+shadows disable
+
+workspace_auto_back_and_forth yes
+
+# exec swaymsg "workspace 2; exec brave;"
+# exec swaymsg "workspace 3; exec element-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland;"
+# exec swaymsg "workspace 4; exec thunderbird-beta;"
+# exec swaymsg "workspace 1; exec /usr/share/sway/scripts/foot.sh;"
+
+workspace 2
+exec brave
+workspace 4
+exec thunderbird-beta
+# exec swaymsg "workspace 1; exec /usr/share/sway/scripts/foot.sh;"
+exec "sleep 1; swaymsg 'workspace 3; exec element-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland; workspace 1; exec /usr/share/sway/scripts/foot.sh'"
+# workspace 1
+# exec /usr/share/sway/scripts/foot.sh
+exec "sleep 1; swww init; pkill swaybg"
+
+# hide help
+exec "sleep 2; /usr/share/sway/scripts/help.sh --toggle"

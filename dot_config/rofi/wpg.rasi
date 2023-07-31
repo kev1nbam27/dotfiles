@@ -1,0 +1,184 @@
+/*-*- mode: css; -*-*/
+
+* {
+    color0:		#0a1c2130;
+    color1:		#bfd3d2;
+    color2:		#65A29A;
+    color3:		#95B6AF;
+    color4:		#ACD8D6;
+    color5:		#A37685;
+    color6:		#42AA98;
+    color7:		#e4ece7;
+    color8:		#143c48;
+    color9:		#d8ffff;
+    color10:	#72e3d4;
+    color11:	#acffef;
+    color12:	#c6ffff;
+    color13:	#e687a6;
+    color14:	#46eccf;
+    color15:	#fafffd;
+    active:		#ACD8D660;
+    inactive:	#3e7c74;
+
+	background:						@color0;
+    foreground:						@color15;
+
+    background-color:				@background;
+    border-color:					@background;
+    separatorcolor:					@color8;
+    scrollbar-handle:				@color9;
+
+    normal-background:				@background;
+    normal-foreground:				@foreground;
+    alternate-normal-background:	@background;
+    alternate-normal-foreground:	@foreground;
+    selected-normal-background:		@active;
+    selected-normal-foreground:		@foreground;
+
+    active-background:				@inactive;
+    active-foreground:				@foreground;
+    alternate-active-background:	@active;
+    alternate-active-foreground:	@foreground;
+    selected-active-background:		@active;
+    selected-active-foreground:		@foreground;
+
+    urgent-background:				@color8;
+    urgent-foreground:				@color15;
+    alternate-urgent-background:	@color8;
+    alternate-urgent-foreground:	@color15;
+    selected-urgent-background:		@color14;
+    selected-urgent-foreground:		@foreground;
+}
+
+
+window {
+    background-color: @background;
+	border-color: #ACD8D6;
+    border:           1;
+    padding:          0;
+    border-radius: 6;
+}
+
+mainbox {
+    border:  0px;
+	border-color: @active;
+    padding: 0;
+    border-radius: 6;
+}
+
+message {
+    border:       2px 0 0;
+    border-color: @separatorcolor;
+    padding:      1px;
+}
+
+textbox {
+    /*highlight:  @highlight;*/
+    text-color: @color15;
+}
+
+listview {
+    border:       2px solid 0 0;
+    padding:      2px 0 0;
+    border-color: @separatorcolor;
+    spacing:      0px;
+    /*scrollbar:    @scrollbar;*/
+}
+
+element {
+    border:  0;
+    padding: 3px;
+}
+
+element.normal.normal {
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
+}
+
+element.normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+
+element.normal.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
+}
+
+element.selected.normal {
+    background-color: @active;
+    text-color:       @color15;
+    opacity: 0.5;
+}
+
+element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color:       @selected-urgent-foreground;
+}
+
+element.selected.active {
+    background-color: @selected-active-background;
+    text-color:       @selected-active-foreground;
+}
+
+element.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+}
+
+element.alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color:       @alternate-urgent-foreground;
+}
+
+element.alternate.active {
+    background-color: @alternate-active-background;
+    text-color:       @alternate-active-foreground;
+}
+
+scrollbar {
+    width:        4px;
+    border:       0;
+    handle-color: @scrollbar-handle;
+    handle-width: 8px;
+    padding:      0;
+}
+
+sidebar {
+    border:       2px 0 0;
+    border-color: @separatorcolor;
+}
+
+inputbar {
+    spacing:    1;
+    text-color: @normal-foreground;
+    padding:    5px;
+    children:   [ prompt, textbox-prompt-sep, entry, case-indicator ];
+}
+
+case-indicator,
+entry,
+prompt,
+button {
+    spacing:    0;
+    text-color: @normal-foreground;
+    background-color: transparent;
+}
+
+button.selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+textbox-prompt-sep {
+    expand:     false;
+    str:        ":";
+    text-color: @normal-foreground;
+    margin:     0 0.3em 0 0;
+    background-color: transparent;
+}
+
+element-text, element-icon {
+	text-color: @foreground;
+	background-color: transparent;
+}

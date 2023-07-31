@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/felix/.config/wpg/wallpapers/cyberpunk-city.png",
+    "alpha": "100",
+
+    "special": {
+        "background": "#010006",
+        "foreground": "#ffbcff",
+        "cursor": "#ffbcff"
+    },
+    "colors": {
+        "color0": "#010006",
+        "color1": "#5A0E65",
+        "color2": "#0B2E8E",
+        "color3": "#5036B7",
+        "color4": "#1E2F9D",
+        "color5": "#B55EA1",
+        "color6": "#1154A3",
+        "color7": "#d38dd7",
+        "color8": "#0a0137",
+        "color9": "#7a0a8a",
+        "color10": "#0437c2",
+        "color11": "#5e36fd",
+        "color12": "#1a34d8",
+        "color13": "#fd68da",
+        "color14": "#0a6cdf",
+        "color15": "#ffbcff"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/felix/.config/wpg/wallpapers/Lunix_Manjaro_futuristic_pipes01-4K.png",
+    "alpha": "100",
+
+    "special": {
+        "background": "#010101",
+        "foreground": "#a3ffff",
+        "cursor": "#a3ffff"
+    },
+    "colors": {
+        "color0": "#010101",
+        "color1": "#02BCC2",
+        "color2": "#019CA2",
+        "color3": "#00ACB1",
+        "color4": "#01898F",
+        "color5": "#02AFB4",
+        "color6": "#03C8CC",
+        "color7": "#79ddde",
+        "color8": "#1a1a1a",
+        "color9": "#01f5fd",
+        "color10": "#01cbd2",
+        "color11": "#01dee5",
+        "color12": "#01b2ba",
+        "color13": "#01e5eb",
+        "color14": "#01ffff",
+        "color15": "#a3ffff"
+    }
+}
