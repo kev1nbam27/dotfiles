@@ -8,7 +8,6 @@ automake
 autotiling-rs
 avahi
 b43-fwcutter
-base
 bluez
 bluez-utils
 brave-browser
@@ -43,7 +42,6 @@ gnome-epub-thumbnailer
 gnome-keyring
 greetd
 greetd-tuigreet
-grub
 gvfs
 gvfs-mtp
 haveged
@@ -63,7 +61,6 @@ libisoburn
 libva-mesa-driver
 libva-vdpau-driver
 libvncserver
-linux61
 logrotate
 lolcat
 lvm2
@@ -80,12 +77,8 @@ mhwd-db
 mkinitcpio-openswap
 mplayer
 mtools
-nano
-nano-syntax-highlighting
 neofetch
 neovim
-network-manager-applet
-networkmanager
 nfs-utils
 nmap
 nss-mdns
@@ -134,7 +127,6 @@ vi
 vulkan-intel
 vulkan-radeon
 web-installer-url-handler
-wget
 which
 wireless-regdb
 wl-clipboard
@@ -150,9 +142,6 @@ xf86-video-nouveau
 xf86-video-vesa
 xfsprogs
 xorg-xwayland
-pipewire
-wireplumber
-pipewire-audio
 zsh
 zsh-autosuggestions
 zsh-completions
