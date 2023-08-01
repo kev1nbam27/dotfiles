@@ -24,7 +24,7 @@ makepkg -si
 
 yay -Syu
 echo Installing yay packages..
-yay -S - < $CHEZMOI_SOURCE_DIR/.packages_yay
+yay -S $(cat $CHEZMOI_SOURCE_DIR/.packages_yay)
 
 echo Installing oh-my-zsh...
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
