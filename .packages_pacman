@@ -1,11 +1,13 @@
 acpi
 acpid
+adobe-source-code-pro-fonts
 amd-ucode
 apparmor
 autotiling-rs
 b43-fwcutter
 bluez
 bluez-utils
+cantarell-fonts
 cliphist
 cowsay
 cpupower
@@ -30,6 +32,7 @@ gnome-epub-thumbnailer
 gnome-keyring
 greetd
 greetd-tuigreet
+gsfonts
 gvfs
 gvfs-mtp
 haveged
@@ -64,6 +67,7 @@ neofetch
 neovim
 nfs-utils
 nmap
+noto-fonts-emoji
 nss-mdns
 ntfs-3g
 okular
@@ -99,6 +103,10 @@ texlive-pictures
 texlive-pstricks
 texlive-publishers
 tigervnc
+ttf-jetbrains-mono-nerd
+ttf-liberation
+ttf-roboto
+ttf-roboto-mono-nerd
 usbutils
 vi
 vulkan-intel

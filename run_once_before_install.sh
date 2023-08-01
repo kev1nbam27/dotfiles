@@ -15,15 +15,18 @@ $sudo pacman -Syu
 echo Installing pacman packages...
 $sudo pacman -S - < $CHEZMOI_SOURCE_DIR/.packages_pacman
 
-echo Installing yay
+echo Installing yay...
 cd $HOME
 $sudo pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
-$sudo makepkg -si
+makepkg -si
 
 yay -Syu
-echo Installing yay packages
+echo Installing yay packages..
 yay -S - < $CHEZMOI_SOURCE_DIR/.packages_yay
+
+echo Installing oh-my-zsh...
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 mkdir -p $HOME/.config/chezmoi && touch $_/already_installed

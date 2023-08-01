@@ -3,8 +3,8 @@ flashfocus
 gtk3-nocsd
 htop-vim
 libfprint-tod-git
-linux-wifi-hotspot
-oh-my-zsh
+mkinitcpio
+mkinitcpio-firmware
 ookla-speedtest-bin
 poweralertd
 swaycwd
@@ -13,9 +13,9 @@ swaylock-effects
 sworkstyle
 swww
 thunderbird-beta-bin
+ttf-meslo-nerd-font-powerlevel10k
 wdisplays
 wlay
 wlsunset
 wpgtk
 xcursor-breeze
-zeit
