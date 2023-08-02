@@ -7,6 +7,7 @@ mkinitcpio
 mkinitcpio-firmware
 ookla-speedtest-bin
 poweralertd
+rofi
 swaycwd
 swayfx-git
 swaylock-effects

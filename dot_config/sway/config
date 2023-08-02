@@ -23,7 +23,7 @@ include $user_conf/inputs/*
 include $user_conf/outputs/*
 
 # enable modes
-include /etc/sway/modes/*
+include $user_conf/modes/*
 
 # output * bg /home/felix/Pictures/abstract.png fill
 

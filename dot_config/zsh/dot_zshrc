@@ -1,3 +1,8 @@
+# Apply colors to terminal
+(cat $HOME/.config/wpg/sequences &)
+
+fortune | cowsay -f tux
+
 # base config for oh my zsh
 source ~/.oh-my-zsh/zshrc
 
