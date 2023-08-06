@@ -54,6 +54,7 @@ libvncserver
 logrotate
 lolcat
 lvm2
+mako
 man-db
 man-pages
 mdadm
@@ -92,6 +93,7 @@ sysfsutils
 texlive-basic
 texlive-bibtexextra
 texlive-bin
+texlive-binextra
 texlive-fontsextra
 texlive-formatsextra
 texlive-games
@@ -123,6 +125,8 @@ xf86-video-nouveau
 xf86-video-vesa
 xfsprogs
 xorg-xwayland
+zathura
+zathura-pdf-mupdf
 zsh
 zsh-autosuggestions
 zsh-completions

@@ -23,9 +23,9 @@ set $bindsym bindsym --to-code
 set $unbindsym unbindsym --to-code
 
 # Your preferred terminal emulator
-set $term /usr/share/sway/scripts/foot.sh -t foot
+set $term /usr/share/sway/scripts/foot.sh
 set $term_cwd $term -D "$(swaycwd 2>/dev/null || echo $HOME)"
-set $term_float footclient -a floating_shell
+set $term_float footclient -a floating_shell -t foot
 
 # onscreen bar
 set $onscreen_bar /usr/share/sway/scripts/wob.sh "$accent-color" "$background-color"
@@ -67,7 +67,7 @@ set $menu rofi -show combi -combi-modi "drun,run" -terminal $term -ssh-command "
 set $locking swaylock --daemonize --color "$selection-color" --inside-color "$selection-color" --inside-clear-color "$text-color" --ring-color "$color2" --ring-clear-color "$color11" --ring-ver-color "$color13" --show-failed-attempts --fade-in 0.2 --grace 2 --effect-vignette 0.5:0.5 --effect-blur 7x5 --ignore-empty-password --screenshots --clock
 
 # bluetooth menu
-set $bluetooth $term_float bluetuith
+set $bluetooth $term_float /usr/share/sway/scripts/bluetuith.sh
 
 ### Idle configuration
 # This will lock your screen after 300 seconds of inactivity, then turn off
@@ -94,7 +94,7 @@ set $statusbar waybar
 set $waybar_position top
 
 # pulseaudio command
-set $pulseaudio $term_float pulsemixer
+set $pulseaudio $term_float /usr/share/sway/scripts/pulsemixer.sh
 
 # help command
 set $help /usr/share/sway/scripts/help.sh --toggle
@@ -141,8 +141,8 @@ set $mounting_daemon '[ -x "$(command -v pcmanfm)" ] && pcmanfm -d'
 # restart kanshi https://github.com/emersion/kanshi/issues/43#issuecomment-531679213
 set $kanshi '[ -x "$(command -v kanshi)" ] && pkill kanshi; exec kanshi'
 set $xdg-dirs '[ -x "$(command -v xdg-user-dirs-update)" ] && exec xdg-user-dirs-update'
-# apply the keyboard layout from localectl if no keyboard layout has been set via config.d
-set $auto_xdg_keyboard 'grep -q xkb_layout ~/.config/sway/config.d/*.conf || /usr/share/sway/scripts/keyboard.sh'
+# apply the keyboard layout from localectl if no keyboard layout has been set via inputs
+set $auto_xdg_keyboard 'grep -q xkb_layout ~/.config/sway/inputs/* || /usr/share/sway/scripts/keyboard.sh'
 set $update_rofi_theme 'mkdir -p $HOME/.config/rofi/ && echo $rofi_theme > $HOME/.config/rofi/Manjaro.rasi'
 set $create_rofi_config '[ ! -f $HOME/.config/rofi/config.rasi ] && echo '@import \\"Manjaro\\"' > $HOME/.config/rofi/config.rasi'
 

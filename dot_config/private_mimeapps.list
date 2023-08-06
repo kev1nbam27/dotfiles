@@ -1,0 +1,15 @@
+[Default Applications]
+text/html=brave-browser.desktop
+x-scheme-handler/http=brave-browser.desktop
+x-scheme-handler/https=brave-browser.desktop
+x-scheme-handler/about=brave-browser.desktop
+x-scheme-handler/unknown=brave-browser.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-EH6651.desktop
+message/rfc822=userapp-Thunderbird-EH6651.desktop
+x-scheme-handler/mid=userapp-Thunderbird-EH6651.desktop
+application/pdf=org.pwmt.zathura.desktop
+
+[Added Associations]
+x-scheme-handler/mailto=userapp-Thunderbird-EH6651.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-EH6651.desktop;
+video/webm=brave-browser.desktop;

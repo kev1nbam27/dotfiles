@@ -1,3 +1,4 @@
+bluetuith
 brave-bin
 flashfocus
 gtk3-nocsd
@@ -7,7 +8,7 @@ mkinitcpio
 mkinitcpio-firmware
 ookla-speedtest-bin
 poweralertd
-rofi
+rofi-lbonn-wayland
 swaycwd
 swayfx-git
 swaylock-effects
@@ -19,5 +20,6 @@ ttf-meslo-nerd-font-powerlevel10k
 wdisplays
 wlay
 wlsunset
+wob
 wpgtk
 xcursor-breeze

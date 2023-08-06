@@ -29,4 +29,11 @@ yay -S $(cat $CHEZMOI_SOURCE_DIR/.packages_yay)
 echo Installing oh-my-zsh...
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+echo Adding user to groups...
+$sudo usermod -a -G video $(whoami)
+$sudo usermod -a -G network $(whoami)
+$sudo usermod -a -G rfkill $(whoami)
+$sudo usermod -a -G power $(whoami)
+$sudo usermod -a -G lp $(whoami)
+
 mkdir -p $HOME/.config/chezmoi && touch $_/already_installed

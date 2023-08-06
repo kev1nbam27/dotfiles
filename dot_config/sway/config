@@ -4,8 +4,6 @@
 #
 # Read `man 5 sway` for a complete reference.
 
-exec ~/.config/wpg/wp_init.sh
-
 set $user_conf $HOME/.config/sway
 
 set $theme $user_conf/themes/wpgtk
@@ -45,20 +43,15 @@ shadows disable
 
 workspace_auto_back_and_forth yes
 
-# exec swaymsg "workspace 2; exec brave;"
-# exec swaymsg "workspace 3; exec element-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland;"
-# exec swaymsg "workspace 4; exec thunderbird-beta;"
-# exec swaymsg "workspace 1; exec /usr/share/sway/scripts/foot.sh;"
-
+# autolaunch apps
 workspace 2
 exec brave
 workspace 4
 exec thunderbird-beta
-# exec swaymsg "workspace 1; exec /usr/share/sway/scripts/foot.sh;"
-exec "sleep 1; swaymsg 'workspace 3; exec element-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland; workspace 1; exec /usr/share/sway/scripts/foot.sh'"
-# workspace 1
-# exec /usr/share/sway/scripts/foot.sh
-exec "sleep 1; swww init; pkill swaybg"
+exec "sleep 1; swaymsg 'workspace 3; exec element-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland; workspace 1; exec /usr/share/sway/scripts/foot.sh -t foot'"
+# uncomment if using gif backgrounds
+# exec "sleep 1; swww init; pkill swaybg"
+exec_always "sleep 1; $HOME/.config/wpg/wp_init.sh"
 
 # hide help
 exec "sleep 2; /usr/share/sway/scripts/help.sh --toggle"
