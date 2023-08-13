@@ -1,6 +1,8 @@
 # Use powerline
 USE_POWERLINE="true"
 
+export PATH="$HOME/.config/emacs/bin:$PATH"
+
 # Source manjaro-zsh-configuration
 if [[ -e $HOME/.config/zsh/manjaro-zsh-config ]]; then
   source $HOME/.config/zsh/manjaro-zsh-config
@@ -11,5 +13,7 @@ if [[ -e $HOME/.config/zsh/manjaro-zsh-prompt ]]; then
 fi
 
 export EDITOR="nvim"
+
+alias emacs="emacsclient -c -a 'emacs'"
 
 bindkey -v

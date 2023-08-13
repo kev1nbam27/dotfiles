@@ -20,6 +20,7 @@ dosfstools
 ecryptfs-utils
 efibootmgr
 element-desktop
+emacs-wayland
 exfatprogs
 f2fs-tools
 ffmpeg
