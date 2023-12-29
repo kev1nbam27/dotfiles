@@ -85,6 +85,7 @@ qt5ct
 qt6-wayland
 qt6ct
 ranger
+rbw
 reiserfsprogs
 rsync
 s-nail
@@ -128,6 +129,7 @@ xfsprogs
 xorg-xwayland
 zathura
 zathura-pdf-mupdf
+zoxide
 zsh
 zsh-autosuggestions
 zsh-completions
