@@ -55,6 +55,7 @@ window#waybar {
     background: mix(@theme_bg_color, transparent, 0.6);
     color: @wm_icon_bg;
     font-size: 14px;
+    border-radius: 10px;
 }
 
 /* Each module */
@@ -71,7 +72,7 @@ window#waybar {
 #clock,
 #cpu,
 #memory,
-#mode,
+#submap,
 #network,
 #pulseaudio,
 #temperature,
@@ -82,6 +83,7 @@ window#waybar {
 #custom-sunset,
 #custom-playerctl,
 #tray {
+    color: @theme_fg_color;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -96,6 +98,14 @@ window#waybar {
 #clock {
     color: @theme_bg_color;
     background-color: @theme_selected_bg_color;
+}
+
+#custom-menu {
+    border-radius: 10px 0 0 10px;
+}
+
+#clock {
+    border-radius: 0 10px 10px 0;
 }
 
 #custom-zeit.tracking {
@@ -159,7 +169,7 @@ window#waybar {
     animation-duration: 2s;
 }
 
-#mode {
+#submap {
     background: @background_color;
 }
 
@@ -184,7 +194,7 @@ window#waybar {
     color: @theme_selected_bg_color;
 }
 
-#workspaces button.focused {
+#workspaces button.active {
     border-color: @theme_selected_bg_color;
 }
 

@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/eldon/.config/wpg/wallpapers/mylivewallpapers-com-Village-in-a-Forest-HD.mp4",
+    "alpha": "100",
+
+    "special": {
+        "background": "#0d1a0f",
+        "foreground": "#cdddcc",
+        "cursor": "#cdddcc"
+    },
+    "colors": {
+        "color0": "#0d1a0f",
+        "color1": "#4B6E64",
+        "color2": "#409661",
+        "color3": "#5C9369",
+        "color4": "#82A976",
+        "color5": "#629E98",
+        "color6": "#4CA2A2",
+        "color7": "#cdddcc",
+        "color8": "#8f9a8e",
+        "color9": "#4B6E64",
+        "color10": "#409661",
+        "color11": "#5C9369",
+        "color12": "#82A976",
+        "color13": "#629E98",
+        "color14": "#4CA2A2",
+        "color15": "#cdddcc"
+    }
+}

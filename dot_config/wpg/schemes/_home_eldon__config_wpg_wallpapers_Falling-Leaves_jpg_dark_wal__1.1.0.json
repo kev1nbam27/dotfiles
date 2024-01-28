@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/eldon/.config/wpg/wallpapers/Falling-Leaves.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#0f0108",
+        "foreground": "#ffe6ff",
+        "cursor": "#ffe6ff"
+    },
+    "colors": {
+        "color0": "#0f0108",
+        "color1": "#ff453e",
+        "color2": "#e85f5f",
+        "color3": "#ff9e9e",
+        "color4": "#ed9abf",
+        "color5": "#cd77b1",
+        "color6": "#8792c7",
+        "color7": "#ffd2f2",
+        "color8": "#410121",
+        "color9": "#ff463b",
+        "color10": "#ff6666",
+        "color11": "#ffa9a9",
+        "color12": "#ffaef5",
+        "color13": "#ff85ed",
+        "color14": "#99afff",
+        "color15": "#ffe6ff"
+    }
+}

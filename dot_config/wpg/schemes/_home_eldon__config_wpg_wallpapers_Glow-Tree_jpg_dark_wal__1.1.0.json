@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/eldon/.config/wpg/wallpapers/Glow-Tree.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#0A0A17",
+        "foreground": "#ffff86",
+        "cursor": "#ffff86"
+    },
+    "colors": {
+        "color0": "#0A0A17",
+        "color1": "#D7222B",
+        "color2": "#F2A654",
+        "color3": "#F1BB29",
+        "color4": "#432AA4",
+        "color5": "#d87ad9",
+        "color6": "#DD4941",
+        "color7": "#F9DB64",
+        "color8": "#18183a",
+        "color9": "#ff1b29",
+        "color10": "#ffd857",
+        "color11": "#fffb22",
+        "color12": "#4f29e2",
+        "color13": "#ff88ff",
+        "color14": "#ff4e41",
+        "color15": "#ffff86"
+    }
+}

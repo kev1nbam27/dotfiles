@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/eldon/.config/wpg/wallpapers/Waterfall.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#161f21",
+        "foreground": "#f1ffff",
+        "cursor": "#f1ffff"
+    },
+    "colors": {
+        "color0": "#161f21",
+        "color1": "#6EC2D4",
+        "color2": "#99ACA4",
+        "color3": "#C0C3A1",
+        "color4": "#6B92A2",
+        "color5": "#99B8C7",
+        "color6": "#60B4CE",
+        "color7": "#cbdde1",
+        "color8": "#293b3f",
+        "color9": "#7affff",
+        "color10": "#b1f4d8",
+        "color11": "#ffffba",
+        "color12": "#79c5e4",
+        "color13": "#b0f7ff",
+        "color14": "#69f4ff",
+        "color15": "#f1ffff"
+    }
+}

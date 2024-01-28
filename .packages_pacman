@@ -37,6 +37,9 @@ gsfonts
 gvfs
 gvfs-mtp
 haveged
+hyfetch
+hyprland
+hyprpaper
 img2pdf
 imv
 inetutils
@@ -90,7 +93,6 @@ reiserfsprogs
 rsync
 s-nail
 sof-firmware
-swaybg
 sysfsutils
 texlive-basic
 texlive-bibtexextra
@@ -118,7 +120,7 @@ vulkan-radeon
 wireless-regdb
 wl-clipboard
 wqy-microhei
-xdg-desktop-portal-wlr
+xdg-desktop-portal-hyprland
 xdg-user-dirs
 xf86-video-amdgpu
 xf86-video-ati

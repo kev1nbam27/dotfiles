@@ -2,6 +2,7 @@
 USE_POWERLINE="true"
 
 export PATH="$HOME/.config/emacs/bin:$PATH"
+export FZF_BASE=/usr/share/fzf
 
 # Source manjaro-zsh-configuration
 if [[ -e $HOME/.config/zsh/manjaro-zsh-config ]]; then
@@ -12,8 +13,20 @@ if [[ -e $HOME/.config/zsh/manjaro-zsh-prompt ]]; then
   source $HOME/.config/zsh/manjaro-zsh-prompt
 fi
 
-export EDITOR="nvim"
+export EDITOR="emacsclient -c -a 'emacs'"
+export FZF_BASE=/usr/share/fzf
 
 alias emacs="emacsclient -c -a 'emacs'"
+function em() {
+  exec >/dev/null
+  setopt LOCAL_OPTIONS NO_NOTIFY NO_MONITOR
+  hyprctl dispatch togglegroup
+  e ${*:-.} &
+  sleep 0.5
+  hyprctl dispatch lockactivegroup lock
+  wait
+  hyprctl dispatch togglegroup
+  exec >/dev/tty
+}
 
 bindkey -v

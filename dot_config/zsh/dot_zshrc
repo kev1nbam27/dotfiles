@@ -2,6 +2,8 @@
 (cat $HOME/.config/wpg/sequences &)
 
 fortune | cowsay -f tux
+export FZF_BASE=/usr/share/fzf
+
 
 # base config for oh my zsh
 source ~/.oh-my-zsh/zshrc

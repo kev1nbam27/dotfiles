@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/eldon/.config/wpg/wallpapers/Abstract-Waves.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#290436",
+        "foreground": "#fff0ef",
+        "cursor": "#fff0ef"
+    },
+    "colors": {
+        "color0": "#290436",
+        "color1": "#C86FD6",
+        "color2": "#3DC2E0",
+        "color3": "#e1b16b",
+        "color4": "#10B2D9",
+        "color5": "#A02DD4",
+        "color6": "#1FCCE5",
+        "color7": "#efd4d3",
+        "color8": "#4c0665",
+        "color9": "#ff7bff",
+        "color10": "#3cffff",
+        "color11": "#ffea75",
+        "color12": "#05f0ff",
+        "color13": "#d629ff",
+        "color14": "#17ffff",
+        "color15": "#fff0ef"
+    }
+}

@@ -16,14 +16,14 @@
     // If height property would be not present, it'd be calculated dynamically
     "height": 30,
     "position": "top",
+    "margin": "10",
 
-    "modules-left": ["custom/menu", "sway/workspaces", "custom/scratchpad"],
-    "modules-center": ["custom/wf-recorder", "sway/mode"],
+    "modules-left": ["custom/menu", "hyprland/workspaces"],
+    "modules-center": ["custom/wf-recorder", "hyprland/submap"],
     "modules-right": [
         // informational
-        "sway/language",
+        "hyprland/language",
         "custom/github",
-        "custom/clipboard",
         "cpu",
         "memory",
         "battery",
@@ -69,7 +69,7 @@
         "format": "{:%e %b %Y %H:%M}",
         "tooltip": true,
         "tooltip-format": "<big>{:%B %Y}</big>\n<tt>{calendar}</tt>",
-        "on-click": "swaymsg exec \\$calendar"
+        "on-click": "hyprctl dispatch exec [floating] \\$calendar"
     },
 
     "cpu": {
@@ -79,7 +79,7 @@
             "warning": 70,
             "critical": 90
         },
-        "on-click": "swaymsg exec \\$term_float /usr/share/sway/scripts/htop.sh"
+        "on-click": "hyprctl dispatch exec [floating] kitty $HOME/.config/hypr/scripts/htop.sh"
     },
 
     "memory": {
@@ -89,7 +89,7 @@
             "warning": 70,
             "critical": 90
         },
-        "on-click": "swaymsg exec \\$term_float /usr/share/sway/scripts/htop.sh"
+        "on-click": "hyprctl dispatch exec [floating] kitty $HOME/.config/hypr/scripts/htop.sh"
     },
 
     "network": {
@@ -98,13 +98,20 @@
         "format-ethernet": "",
         "format-disconnected": "睊",
         "tooltip-format": "{ifname} ({essid}): {ipaddr}",
-        "on-click": "swaymsg exec \\$term_float /usr/share/sway/scripts/nmtui.sh"
+        "on-click": "hyprctl dispatch exec [floating] kitty $HOME/.config/hypr/scripts/nmtui.sh"
     },
 
-    "sway/mode": {
+    "hyprland/submap": {
         "format": "<span style=\"italic\">{}</span>",
         "tooltip": false
     },
+
+"hyprland/workspaces": {
+    "format": "{name}",
+    "sort-by-number": true,
+    "active-only": false,
+    "on-click": "activate"
+  },
 
     "idle_inhibitor": {
         "format": "{icon}",
@@ -120,8 +127,8 @@
     "backlight": {
         "format": "{icon} {percent}%",
         "format-icons": ["", "", ""],
-        "on-scroll-up": "swaymsg exec \\$brightness_up",
-        "on-scroll-down": "swaymsg exec \\$brightness_down"
+        "on-scroll-up": "hyprctl dispatch exec [floating] \\$brightness_up",
+        "on-scroll-down": "hyprctl dispatch exec [floating] \\$brightness_down"
     },
 
     "pulseaudio": {
@@ -136,10 +143,10 @@
             "default": ["󰕿", "󰖀", "󰕾"]
         },
         "tooltip-format": "{icon} {volume}% {format_source}",
-        "on-click": "swaymsg exec \\$pulseaudio",
-        "on-click-middle": "swaymsg exec \\$volume_mute",
-        "on-scroll-up": "swaymsg exec \\$volume_up",
-        "on-scroll-down": "swaymsg exec \\$volume_down"
+        "on-click": "hyprctl dispatch exec [floating] \\$pulseaudio",
+        "on-click-middle": "hyprctl dispatch exec [floating] \\$volume_mute",
+        "on-scroll-up": "hyprctl dispatch exec [floating] \\$volume_up",
+        "on-scroll-down": "hyprctl dispatch exec [floating] \\$volume_down"
     },
 
     "temperature": {
@@ -149,7 +156,7 @@
         "format": "{icon} {temperatureC}°",
         "format-icons": ["", "", ""],
         "tooltip": false,
-        "on-click": "swaymsg exec \"\\$term_float /usr/share/sway/scripts/sensors.sh\""
+        "on-click": "hyprctl dispatch exec [floating] kitty $HOME/.config/hypr/scripts/sensors.sh\""
     },
 
     "tray": {
@@ -159,36 +166,22 @@
 
     "custom/menu": {
         "format": "",
-        "on-click": "swaymsg exec \\$menu",
+        "on-click": "hyprctl dispatch exec [floating] \\$menu",
         "tooltip": false
     },
 
     "bluetooth": {
         "format": "󰂯",
         "format-disabled": "󰂲",
-        "on-click": "swaymsg exec \\$bluetooth",
+        "on-click": "hyprctl dispatch exec [floating] \\$bluetooth",
         "on-click-right": "rfkill toggle bluetooth",
         "tooltip-format": "{}"
     },
 
-    "sway/language": {
+    "hyprland/language": {
         "format": " {}",
         "min-length": 5,
         "tooltip": false,
-        "on-click": "swaymsg input $(swaymsg -t get_inputs --raw | jq '[.[] | select(.type == \"keyboard\")][0] | .identifier') xkb_switch_layout next"
-    },
-
-    "custom/scratchpad": {
-        "interval": "once",
-        "return-type": "json",
-        "format": "{icon}",
-        "format-icons": {
-            "one": "类",
-            "many": "缾"
-        },
-        "exec": "/bin/sh /usr/share/sway/scripts/scratchpad.sh",
-        "on-click": "swaymsg 'scratchpad show'",
-        "signal": 7
     },
 
     "custom/sunset": {
@@ -200,9 +193,9 @@
             "on": "󰌵",
             "off": "󰌶"
         },
-        "exec": "fallback_latitude=50.1 fallback_longitude=8.7 latitude= longitude= /usr/share/sway/scripts/sunset.sh",
-        "on-click": "/usr/share/sway/scripts/sunset.sh toggle; pkill -RTMIN+6 waybar",
-        "exec-if": "/usr/share/sway/scripts/sunset.sh check",
+        "exec": "fallback_latitude=50.1 fallback_longitude=8.7 latitude= longitude= $HOME/.config/hypr/scripts/sunset.sh",
+        "on-click": "$HOME/.config/hypr/scripts/sunset.sh toggle; pkill -RTMIN+6 waybar",
+        "exec-if": "$HOME/.config/hypr/scripts/sunset.sh check",
         "signal": 6
     },
 
@@ -245,18 +238,6 @@
         "signal": 5
     },
 
-    "custom/clipboard": {
-        "format": "󰨸",
-        "interval": "once",
-        "return-type": "json",
-        "on-click": "swaymsg -q exec '$clipboard'; pkill -RTMIN+9 waybar",
-        "on-click-right": "swaymsg -q exec '$clipboard-del'; pkill -RTMIN+9 waybar",
-        "on-click-middle": "rm -f ~/.cache/cliphist/db; pkill -RTMIN+9 waybar",
-        "exec": "printf '{\"tooltip\":\"%s\"}' $(cliphist list | wc -l)' item(s) in the clipboard\r(Mid click to clear)'",
-        "exec-if": "[ -x \"$(command -v cliphist)\" ] && [ $(cliphist list | wc -l) -gt 0 ]",
-        "signal": 9
-    },
-
     "custom/dnd": {
         "interval": "once",
         "return-type": "json",
@@ -280,9 +261,9 @@
             "on": "",
             "off": ""
         },
-        "exec": "/usr/share/sway/scripts/wluma.sh",
-        "on-click": "/usr/share/sway/scripts/wluma.sh toggle; pkill -RTMIN+12 waybar",
-        "exec-if": "/usr/share/sway/scripts/wluma.sh check",
+        "exec": "$HOME/.config/hypr/scripts/wluma.sh",
+        "on-click": "$HOME/.config/hypr/scripts/wluma.sh toggle; pkill -RTMIN+12 waybar",
+        "exec-if": "$HOME/.config/hypr/scripts/wluma.sh check",
         "signal": 12
     }
 }

@@ -10,10 +10,22 @@ dir=$(pwd)
 [ command -v doas &> /dev/null ] && sudo=doas || sudo=sudo
 echo Using $sudo
 
+echo Changing mirrors...
+{ echo "Server = https://cloudflaremirrors.com/archlinux/\$repo/os/\$arch"; cat /etc/pacman.d/mirrorlist; } | $sudo tee /etc/pacman.d/mirrorlist
+$sudo pacman -Syyu
+
 echo Checking for updates...
 $sudo pacman -Syu
 echo Installing pacman packages...
 $sudo pacman -S - < $CHEZMOI_SOURCE_DIR/.packages_pacman
+
+echo Installing waybar...
+cd $HOME
+sudo pacman -S meson ninja
+git clone https://github.com/kev1nbam27/Waybar.git
+cd Waybar
+meson build
+ninja -C build install
 
 echo Installing yay...
 cd $HOME

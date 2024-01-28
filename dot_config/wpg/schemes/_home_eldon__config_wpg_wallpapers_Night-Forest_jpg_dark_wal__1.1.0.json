@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/eldon/.config/wpg/wallpapers/Night-Forest.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#0b0c18",
+        "foreground": "#fff5ff",
+        "cursor": "#fff5ff"
+    },
+    "colors": {
+        "color0": "#0b0c18",
+        "color1": "#927291",
+        "color2": "#584B71",
+        "color3": "#625C95",
+        "color4": "#303D95",
+        "color5": "#9469BF",
+        "color6": "#837797",
+        "color7": "#ccbdc8",
+        "color8": "#1a1c3a",
+        "color9": "#ce83cc",
+        "color10": "#6e559f",
+        "color11": "#7367d1",
+        "color12": "#3145ce",
+        "color13": "#c075ff",
+        "color14": "#a589d5",
+        "color15": "#fff5ff"
+    }
+}
