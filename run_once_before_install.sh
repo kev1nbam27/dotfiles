@@ -40,7 +40,8 @@ echo Installing yay packages..
 yay -S $(cat $CHEZMOI_SOURCE_DIR/.packages_yay)
 
 echo Installing oh-my-zsh...
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --skip-chsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+chsh -s /bin/zsh
 
 echo Installing doom emacs...
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
