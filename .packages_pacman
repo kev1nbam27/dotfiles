@@ -26,8 +26,10 @@ f2fs-tools
 ffmpeg
 ffmpegthumbnailer
 file-roller
+firefox
 fortune-mod
 fprintd
+fzf
 github-cli
 gnome-epub-thumbnailer
 gnome-keyring
@@ -90,6 +92,7 @@ qt6ct
 ranger
 rbw
 reiserfsprogs
+ripgrep
 rsync
 s-nail
 sof-firmware
@@ -119,6 +122,7 @@ vulkan-intel
 vulkan-radeon
 wireless-regdb
 wl-clipboard
+wofi
 wqy-microhei
 xdg-desktop-portal-hyprland
 xdg-user-dirs

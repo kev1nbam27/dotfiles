@@ -1,5 +1,4 @@
 bluetuith
-brave-bin
 flashfocus
 grimblast-git
 gtk3-nocsd
@@ -12,13 +11,13 @@ mpvpaper
 ookla-speedtest-bin
 poweralertd
 rclone
-rofi-lbonn-wayland
 rsync
 swaycwd
 swaylock-effects
 sworkstyle
 thunderbird-beta-bin
-ttf-fira-code
+ttf-firacode-nerd
+ttf-fira-sans
 ttf-meslo-nerd-font-powerlevel10k
 wdisplays
 wlay

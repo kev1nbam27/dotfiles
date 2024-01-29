@@ -1,4 +1,4 @@
-#!/bin/bash
+:#!/bin/bash
 
 # check if script has been run before
 if [[ -f $HOME/.config/chezmoi/already_installed ]]; then
@@ -19,6 +19,14 @@ $sudo pacman -Syu
 echo Installing pacman packages...
 $sudo pacman -S - < $CHEZMOI_SOURCE_DIR/.packages_pacman
 
+echo Installing waybar...
+cd $HOME
+$sudo pacman -S meson ninja git gtkmm
+git clone https://github.com/kev1nbam27/Waybar.git
+cd Waybar
+meson build
+ninja -C build install
+
 echo Installing yay...
 cd $HOME
 $sudo pacman -S --needed git base-devel
@@ -26,26 +34,12 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
-echo Installing waybar...
-cd $HOME
-$sudo pacman -S meson ninja git gtkmm
-yay -Sy cmake scdoc wayland-protocols git meson ninja gtkmm3 jsoncpp libsigc++ fmt wayland chrono-date spdlog libgtk-3-dev gobject-introspection libgirepository1.0-dev libpulse libnl libappindicator-gtk3 libdbusmenu-gtk3 libmpdclient libsndio libevdev xkbregistry upower
-git clone https://github.com/kev1nbam27/Waybar.git
-cd Waybar
-meson build
-ninja -C build install
-
 yay -Syu
 echo Installing yay packages..
 yay -S $(cat $CHEZMOI_SOURCE_DIR/.packages_yay)
 
 echo Installing oh-my-zsh...
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --skip-chsh"
-
-echo Installing doom emacs...
-git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
-~/.config/emacs/bin/doom install
-
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo Adding user to groups...
 $sudo usermod -a -G video $(whoami)
@@ -53,12 +47,5 @@ $sudo usermod -a -G network $(whoami)
 $sudo usermod -a -G rfkill $(whoami)
 $sudo usermod -a -G power $(whoami)
 $sudo usermod -a -G lp $(whoami)
-
-echo Setting GTK theme...
-gsettings set org.gnome.desktop.interface gtk-theme linea-nord-color
-
-echo Creating directories...
-cd $HOME
-mkdir Videos Pictures Downloads Documents
 
 mkdir -p $HOME/.config/chezmoi && touch $_/already_installed
