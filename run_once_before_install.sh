@@ -46,7 +46,6 @@ echo Installing doom emacs...
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
 ~/.config/emacs/bin/doom install
 
-
 echo Adding user to groups...
 $sudo usermod -a -G video $(whoami)
 $sudo usermod -a -G network $(whoami)
@@ -57,8 +56,8 @@ $sudo usermod -a -G lp $(whoami)
 echo Setting GTK theme...
 gsettings set org.gnome.desktop.interface gtk-theme linea-nord-color
 
-echo Creating directories...
+echo Creating user directories...
 cd $HOME
-mkdir Videos Pictures Downloads Documents
+mkdir Screenshots Desktop Downloads Templates Public Documents Music Pictures Videos
 
 mkdir -p $HOME/.config/chezmoi && touch $_/already_installed
