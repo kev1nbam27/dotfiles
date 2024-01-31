@@ -7,6 +7,7 @@ autotiling-rs
 b43-fwcutter
 bluez
 bluez-utils
+brightnessctl
 cantarell-fonts
 cliphist
 cowsay
@@ -122,6 +123,7 @@ vulkan-intel
 vulkan-radeon
 wireless-regdb
 wl-clipboard
+wlsunset
 wofi
 wqy-microhei
 xdg-desktop-portal-hyprland
