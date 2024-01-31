@@ -40,7 +40,8 @@ echo Installing yay packages..
 yay -S $(cat $CHEZMOI_SOURCE_DIR/.packages_yay)
 
 echo Installing oh-my-zsh...
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --skip-chsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+chsh -s /bin/zsh
 
 echo Installing doom emacs...
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
@@ -55,6 +56,11 @@ $sudo usermod -a -G lp $(whoami)
 
 echo Setting GTK theme...
 gsettings set org.gnome.desktop.interface gtk-theme linea-nord-color
+
+echo Configuring greetd...
+echo "[terminal]\nvt = \"next\"\n\n[default_session]\ncommand = \"tuigreet --user-menu --user-menu-min-uid 1000 --remember --remember-session --time --issue --asterisks\"\nuser = \"greeter\"" | $sudo tee /etc/greetd/config.toml
+echo "* {\n    background-image: none;\n}\nwindow {\n    background-color: @transparent_background_color;\n}" | $sudo tee /etc/greetd/style.css
+$sudo systemctl enable greetd.service
 
 echo Creating user directories...
 cd $HOME
